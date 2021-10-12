@@ -1,22 +1,22 @@
 -- 1
 SELECT trip_no, plane, town_from, town_to from trip
 WHERE plane != 'IL-86'
-ORDER BY plane
+ORDER BY plane;
 -- 2
 SELECT name FROM Ships
-WHERE name LIKE 'W%n' 
+WHERE name LIKE 'W%n';
 -- 3
 SELECT product.maker, product.type, laptop.speed, laptop.model FROM product, laptop
-WHERE product.model=laptop.model AND speed > 600
+WHERE product.model=laptop.model AND speed > 600;
 -- 4
 SELECT COUNT(*) from pc, product
-WHERE maker = 'A' and pc.model = product.model
+WHERE maker = 'A' and pc.model = product.model;
 -- 5
 SELECT DISTINCT maker FROM Product 
 WHERE Product.type = 'Printer' and maker IN(
 	SELECT Product.maker FROM PC
 	INNER JOIN Product ON PC.model = Product.model
-	WHERE PC.speed = (SELECT MAX(PC.speed) FROM PC)
+	WHERE PC.speed = (SELECT MAX(PC.speed) FROM PC);
 -- 6
 SELECT date_format(date, '%Y.%m.%d') as date
 from Income;
