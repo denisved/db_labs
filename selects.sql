@@ -16,7 +16,8 @@ SELECT DISTINCT maker FROM Product
 WHERE Product.type = 'Printer' and maker IN(
 	SELECT Product.maker FROM PC
 	INNER JOIN Product ON PC.model = Product.model
-	WHERE PC.speed = (SELECT MAX(PC.speed) FROM PC);
+	WHERE PC.speed = (SELECT MAX(PC.speed) FROM PC)
+);
 -- 6
 SELECT date_format(date, '%Y.%m.%d') as date
 from Income;
