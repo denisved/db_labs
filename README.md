@@ -1,23 +1,19 @@
-# Second Lab
-<h1>Variant 28</h1>
-<h2>Create a selection scripts for tasks below </h2>
-
-1. БД «Аеропорт». Знайдіть номери всіх рейсів, на яких не курсує літак 'IL-86'. Вивести: trip_no, plane, town_from, town_to. Вихідні дані впорядкувати за зростанням за стовпцем plane.
-
-2. БД «Кораблі». З таблиці Ships вивести назви кораблів, що починаються на 'W' та закінчуються літерою 'n'.
-
-3. БД «Комп. фірма». Виведіть виробника, тип, модель та частоту процесора для ноутбуків, частота процесорів яких перевищує 600 МГц. Вивести: maker, type, model, speed.
-
-4. БД «Комп. фірма». Знайти наявну кількість комп’ютерів (таблиця PC), що випущені виробником 'A'.
-
-5. БД «Комп. фірма». Знайдіть виробників принтерів, що випускають ПК із найвищою швидкістю процесора. Виведіть: maker.
-
-6. БД «Фірма прий. вторсировини». З таблиці Income виведіть дати в такому форматі: рік.число_місяця.день, наприклад, 2001.02.15 (без формату часу).
-
-7. БД «Комп. фірма». Знайти моделі та ціни ПК, вартість яких перевищує мінімальну вартість ноутбуків. Вивести: model, price.
-
-8. БД «Кораблі». Вкажіть назву, країну та число гармат кораблів, що були пошкоджені в битвах. Вивести: ship, country, numGuns. (Підказка: використовувати підзапити в якості обчислювальних стовпців)
-
-9. БД «Кораблі». Визначити назви всіх кораблів із таблиці Ships, які задовольняють, у крайньому випадку, комбінації будь-яких трьох критеріїв із наступного списку: numGuns=9, bore=16, displacement=46000, type='bb', country='Japan', launched=1916, class='Revenge'. Вивести: name, numGuns, bore, displacement, type, country, launched, class. (Підказка: використати для перевірки умов оператор CASE)
-
-10. БД «Кораблі». Знайдіть класи, у яких входить лише один корабель з усієї БД (врахувати також кораблі в таблиці Outcomes, яких немає в таблиці Ships). Вивести: class. (Підказка: використовувати оператор UNION та операцію EXISTS)
+# Third Lab
+<ul>
+<li>The task is performed on the basis of the designed database model in first lab.</li>
+  
+<li>For this model, the structure should be re-analyzed  to ensure the 3rd normal form, availability of all Primary Keys.</li>
+  
+<li>To implement a database, write a script to create it in the core of MySQL, which must meet the following criteria:</li>
+<ul>
+<li>SQL-script can be run several times in a row and at
+this should not result in errors due to existing ones
+database elements. That is, appropriate must be provided
+DROP for tables and IF EXISTS to create a database.</li> 
+<li>For each table it is necessary to fill in with data on
+10-15 INSERT, while predicting the correct
+data insertion procedure.</li>  
+<li>Create at least 2 additional indexes for tables,
+according to the performed preliminary analysis of the data structure.</li>
+  </ul>
+</ul>
